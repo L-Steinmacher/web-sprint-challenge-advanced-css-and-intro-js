@@ -365,7 +365,7 @@ Create a function called `randomize` that takes a data array as an argument and 
 
 
 function randomize(arr){
-  arr.sort(() => Math.random() - 0.5);
+  arr.sort(() => Math.floor(Math.random() * (arr.length -1)));
   }
 
 
