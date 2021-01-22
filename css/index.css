@@ -50,7 +50,7 @@ a:hover {
     font-weight: 200;	
 }	
 img {	
-    height:39rem;	
+    width: 40%;	
     object-fit: cover;	
     display: block;	
     margin: 2%;	
@@ -69,18 +69,28 @@ header{
     justify-content: center;
 }
 nav{
-    width:30%;
+    width:50%;
     display:flex;
-    justify-content:space-evenly;
+    justify-content:center;
     margin-top:5%;
 }
 nav a{
     color:#626262;
+    margin: 5%;
 }
-nav span{
-    border-left:3px solid #626262;
 
+nav a:first-child{
+    border-right:3px solid #626262;
+    margin-right: 5%;
+    padding-right: 3%;
 }
+
+nav a:last-child{
+    border-left:3px solid #626262;
+    margin-left: 5%;
+    padding-left: 3%;
+}
+    
 /*Title Section Styles*/
 .title-container{
     display:flex;
@@ -139,15 +149,24 @@ button:hover{
       /*           Media Queries          */
 
 @media(max-width: 500px){
+
+    .title-container div{
+        width: 100%;
+    }
+
+    img{
+        width: 80%;
+    }
+
     .artists-container{
         flex-direction: column;
         align-items: center;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 100%;
     }
 
     .artists{
-        width: 70%;
+        width: 100%;
     }
 }
