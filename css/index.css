@@ -139,5 +139,15 @@ button:hover{
       /*           Media Queries          */
 
 @media(max-width: 500px){
-    
+    .artists-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .artists{
+        width: 70%;
+    }
 }

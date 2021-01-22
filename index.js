@@ -243,12 +243,14 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr){
-  // let century = [];
-  // for(let i = 0; i < arr.length; i++){
-  //   arr[i][years]
-  //   if()
-  // }
-
+  let century = [];
+  for(let i = 0; i < arr.length; i++){
+    let life = arr[i]['years'].split(" ");
+    if(life[0] > 1900 && life[2]< 2000){
+      century.push(arr[i]['name'])
+    }
+  }
+return century;
 }
 
 
@@ -262,8 +264,9 @@ function get20s(arr){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(arr, index){
+  arr.splice(index,1);
+  return arr.length;
 }
    
 
@@ -283,8 +286,17 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(arr){
+  let addition = { 
+    id: 20,
+    name: 'Your Name Here', 
+    years: 'Your Birth Year - current day',
+    genre: 'Web Design', 
+    nationality: 'Your Nationality Here',
+    bio: 'Add 1-2 sentences (or use lorem ipsum)'
+  }
+  arr.push(addition);
+  return arr;
   }
 
   
@@ -296,8 +308,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(arr){
+  let painters = [];
+  for(let i = 0; i < arr.length; i++){
+      if(arr[i]["paintings"] > 100){
+        painters.push(arr[i]["name"]);
+      }
+  }
+  return painters;
 }
 
 
@@ -325,7 +343,7 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+function getHTML(data){
 
     /* Code here */
 
